@@ -8,7 +8,7 @@
 2. Install the composer dependencies - `composer install`
 3. From a terminal run - `cp .env.example .env`
 4. Generate a secret key - `php artisan key:generate`
-
+5.
 ### Setting up the database
 
 #### SQLite
@@ -18,6 +18,12 @@
 3. Remove all environment variables prefixed with `DB_` except `DB_CONNECTION`
 4. Set the `DB_CONNECTION` environment variable to `sqlite`. (Ex. `DB_CONNECTION=sqlite`)
 5. Run the database migrations - `php artisan migrate`
+
+### Viewing the site in a browser (Mac's only)
+
+The easiest way to view the application in the browser is if you have [Laravel Valet](https://laravel.com/docs/5.6/valet) installed.
+
+Once Valet has been installed and the repository has been setup, you can run `valet link` from the projects root. The project will then be accessable at `smiledirectclub.test` in your browser.
 
 ## Running the tests
 

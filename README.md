@@ -49,7 +49,7 @@ The client side application is a `Vue.js` single page application (SPA) using th
 
 When registering a new user, if the Gender API returns a guess accuracy below 70% the application's API will return an error and the Vue.js app will then expose hidden radio buttons so the user can pick a gender from the list.
 
-To complete the bonus (send the user's country to the gender API), a request is being made the `ip-api.com` API which returns data regarding the user's IP address. Before submitting the a registration form, I then attach the user's country code to the form request's data. The Laravel application then checks if a country code is present and if it is, will use it when sending the request to Gender API.
+To complete the bonus (send the user's country to the gender API), a request is being made to the `ip-api.com` API which returns data about the user's IP address. Before submitting the registration form, the app attaches the user's country code (`ip-api.com` response) to the form request's data. When creating and persisting a `App\User` model, the app checks if the country code input is present in the request. If present, the country code will be passed along to the Gender API so a more accurate guess can be achieved.
 
 ### API Endpoints
 

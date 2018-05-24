@@ -11,8 +11,8 @@
                 <div v-if="hasEmailErrors" class="invalid-feedback" v-for="error in errors.email" v-text="error"></div>
             </div>
             <div class="form-group form-label-group">
-                <input type="text" id="name" class="form-control" :class="{ 'is-invalid': hasNameErrors }" placeholder="Name" required v-model="name">
-                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" :class="{ 'is-invalid': hasNameErrors }" placeholder="Full Name" required v-model="name">
+                <label for="name">Full Name</label>
                 <div v-if="hasNameErrors" class="invalid-feedback" v-for="error in errors.name" v-text="error"></div>
                 <p class="help-text text-muted">**Using a name like "Sombaji Doe" will result in an accuracy < 70.**</p>
             </div>
